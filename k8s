@@ -5,8 +5,8 @@ alias k=kubectl
 alias kn='kubectl config set-context --current --namespace= '
 
 # get pods, logs, and debug
-alias klog='kubectl logs '
 alias kpods='kubectl get po'
+alias klog='kubectl logs '
 alias kdeug='kubectl describe po '
 
 # get pod image version
