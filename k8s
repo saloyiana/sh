@@ -1,0 +1,20 @@
+kubectl completion zsh
+alias k=kubectl
+alias kn='kubectl config set-context --current --namespace= '
+alias klog='kubectl logs '
+alias kpods='kubectl get po'
+alias kdeug='kubectl describe po '
+alias kimage='kubectl get po -o=jsonpath='{.spec.containers[*].image}''
+alias krestart='kubectl rollout restart deploy '
+alias kdeploy='kubectl get deploy '
+compdef __start_kubectl k
+# ---
+echo """
+- set env: kn.
+- get pods: kpods. 
+- get logs: klog + pod name.
+- get current svc version: kimage + pod name.
+- debug pod: kdebug + pod name.
+- restart svc: krestart + svc name.
+- get svcs: kdeploy
+"""
